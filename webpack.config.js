@@ -22,4 +22,11 @@ module.exports = {
           }
         ]
       },
+      plugins: [ //plugins que se van a usar
+        new HtmlWebpackPlugin({
+            inject: true, //insercion de los elementos
+            template: './public/index.html', //plantilla que se va a usar
+            filename: 'index.html' //nombre del archivo que se va a generar , es el resultado de la preparacion de html
+        })
+        ]
     }
