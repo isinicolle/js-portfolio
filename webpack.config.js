@@ -17,9 +17,9 @@ module.exports = {
             test: /\.m?js$/, //extensiones a trabajar
             exclude: /node_modules/, //excluir las carpetas de node_modules
             use: {
-                loader: 'babel-loader' //trabajar con babel
+                loader: 'babel-loader'
             }
-        }
-    ] }
-        
-}
+          }
+        ]
+      },
+    }
