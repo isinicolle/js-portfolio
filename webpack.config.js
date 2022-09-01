@@ -10,5 +10,16 @@ module.exports = {
     //extensiones a trabajar
     resolve: {
         extensions: ['.js', '.jsx'] //extensiones a trabajar
-    }
+    },
+    module:{ 
+        rules: [   //modulo que se va a trabajar
+        {
+            test: /\.m?js$/, //extensiones a trabajar
+            exclude: /node_modules/, //excluir las carpetas de node_modules
+            use: {
+                loader: 'babel-loader' //trabajar con babel
+            }
+        }
+    ] }
+        
 }
