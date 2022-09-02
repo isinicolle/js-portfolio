@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js', //cual es el punto de entrada de la aplicacion
@@ -20,6 +21,13 @@ module.exports = {
             use: {
                 loader: 'babel-loader'
             }
+          },
+          {
+            test: /\.css$/, //regla para trabajar con los archivos css
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader'
+            ],
           }
         ]
       },
@@ -28,6 +36,7 @@ module.exports = {
             inject: true, //insercion de los elementos
             template: './public/index.html', //plantilla que se va a usar
             filename: 'index.html' //nombre del archivo que se va a generar , es el resultado de la preparacion de html
-        })
+        }),
+           MiniCssExtractPlugin(),
         ]
     }
