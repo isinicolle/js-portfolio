@@ -11,4 +11,5 @@ const getData = async (id) => {
   };
 };
 
+
 export default getData;
