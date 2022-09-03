@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js', //cual es el punto de entrada de la aplicacion
@@ -38,5 +39,8 @@ module.exports = {
             filename: 'index.html' //nombre del archivo que se va a generar , es el resultado de la preparacion de html
         }),
            MiniCssExtractPlugin(),
+            new CopyPlugin({
+              
+            })
         ]
     }
