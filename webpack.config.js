@@ -23,10 +23,10 @@ module.exports = {
             }
           },
           {
-            test: /\.css$/, //regla para trabajar con los archivos css
-            use: [
-                MiniCssExtractPlugin.loader,
-                'css-loader'
+            test: /\.css|.styl$/i,
+            use: [MiniCssExtractPlugin.loader,
+              'css-loader',
+              'stylus-loader'
             ],
           }
         ]
